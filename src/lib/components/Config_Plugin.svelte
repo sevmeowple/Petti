@@ -1,6 +1,6 @@
 <script lang="ts">
   // 获取pluginstore
-  import { plugins } from "../plugin";
+  import { plugins } from "../stores/plugin";
   import type { Plugin } from "../../types";
   import { onMount } from "svelte";
   import { show } from "@tauri-apps/api/app";

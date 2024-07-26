@@ -1,12 +1,4 @@
-/*
- * @Author: Qmm 1259598502@qq.com
- * @Date: 2024-07-24 15:50:12
- * @LastEditors: Qmm 1259598502@qq.com
- * @LastEditTime: 2024-07-24 16:43:52
- * @FilePath: \Apps\Petti\Petti\src\lib\plugins\Meow.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
-import petSay from "../stores/petStore";
+import { petSay } from "../stores/petStore";
 import type { Plugin } from "../../types";
 // 拓展PLugin接口
 // 1. 添加contents属性，用于存储需要展示的内容
@@ -26,14 +18,14 @@ interface MeowPlugin extends Plugin {
   interval: number | null | undefined;
 }
 
-const examplePlugin: MeowPlugin = {
-  name: "examplePlugin",
+const meowPlugin: MeowPlugin = {
+  name: "meowPlugin",
   interval: null,
   contents: ["你好，喵喵在这里！", "多来看看我哦", "吃什么好呢喵"],
   contentIndex: 0,
 
   async init() {
-    console.log("Example Plugin Initialized");
+    console.log("Meow Plugin Initialized");
   },
 
   start() {
@@ -57,4 +49,4 @@ const examplePlugin: MeowPlugin = {
     clearInterval(this.interval);
   },
 };
-export default examplePlugin;
+export default meowPlugin;

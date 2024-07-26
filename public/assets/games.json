@@ -1,0 +1,12 @@
+{
+  "char1": {
+    "name": "char1",
+    "img": "char1.png",
+    "description": "This is the first character"
+  },
+  "char2": {
+    "name": "char2",
+    "img": "char2.png",
+    "description": "This is the second character"
+  }
+}

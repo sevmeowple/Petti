@@ -21,32 +21,35 @@
         "startDragging": true
       },
       "fs": {
-        "all": true
+        "all": true,
+        "scope": ["$RESOURCE/data/*"]
       },
       "path": {
+        "all": true
+      },
+      "protocol": {
+        "all": true,
+        "asset": true,
+        "assetScope": ["$RESOURCE/data/*", "$RESOURCE/*"]
+      },
+      "dialog": {
         "all": true
       }
     },
     "windows": [
       {
         "title": "Pet",
-        "width": 400,
+        "width": 800,
         "height": 400,
         "transparent": true,
         "decorations": false,
         "url": "index.html",
-        "label": "pet_window"
-      },
-      {
-        "title": "Config",
-        "width": 800,
-        "height": 600,
-        "url": "config.html",
-        "label": "config_window"
+        "label": "pet_window",
+        "alwaysOnTop": true
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; img-src 'self' asset: https://asset.localhost; connect-src 'self' https://unpkg.com https://cdn.jsdelivr.net https://asset.localhost; script-src 'self' 'unsafe-eval' 'sha256-OjJCHLsDai9RxAm5j7aHegeaKiPM/1J+eo94oHcFNYI=' 'sha256-PB2ZIsXpwr2uKUkFEQ7JTZ08tegFJIDB2111zwskebw=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=';"
     },
     "bundle": {
       "active": true,
@@ -58,7 +61,8 @@
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
-      ]
+      ],
+      "resources": ["./data/*"]
     }
   }
 }

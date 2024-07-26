@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@rive-app/canvas": "^2.19.4",
+    "@simonwep/pickr": "^1.9.1",
     "@tauri-apps/api": "^1",
     "lottie-web": "^5.12.2",
     "tauri-plugin-sql-api": "github:tauri-apps/tauri-plugin-sql#v1"
