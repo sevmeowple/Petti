@@ -2043,7 +2043,7 @@ dependencies = [
  "tauri-build",
  "tauri-plugin-sql",
  "tokio",
- "tokio-macros 1.8.2",
+ "tokio-macros",
  "windows 0.58.0",
 ]
 
@@ -3593,19 +3593,8 @@ dependencies = [
  "pin-project-lite",
  "signal-hook-registry",
  "socket2",
- "tokio-macros 2.4.0",
+ "tokio-macros",
  "windows-sys 0.52.0",
-]
-
-[[package]]
-name = "tokio-macros"
-version = "1.8.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d266c00fde287f55d3f1c3e96c500c362a2b8c695076ec180f27918820bc6df8"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 1.0.109",
 ]
 
 [[package]]

@@ -1,8 +1,9 @@
 <script lang="ts">
-  import Meow from "../lib/plugins/Meow";
-  import Timer from "../lib/plugins/Timer";
+  // import Meow from "../lib/plugins/Meow";
+  // import Timer from "../lib/plugins/Timer";
   import Momo from "../lib/plugins/Momo";
   import { onMount } from "svelte";
+  import pluginList from "./plugins";
   import {
     registerPlugin,
     startPlugin,
@@ -12,14 +13,18 @@
   import type { Plugin } from "../types";
   import Config_Theme from "./components/Config_Theme.svelte";
   import { status } from "../lib/stores/petStore";
+  import momoPlugin from "./plugins/Momo";
   //  列出列表让用户选择是否启用插件
   let plist: Set<Plugin> = new Set();
   let activeTab = "plugins";
   onMount(() => {
     let status_now;
-    registerPlugin(Timer);
-    registerPlugin(Meow);
-    registerPlugin(Momo);
+    // registerPlugin(Timer);
+    // registerPlugin(Meow);
+    // registerPlugin(Momo);
+    pluginList.forEach((plugin) => {
+      registerPlugin(plugin);
+    });
     plugins.subscribe((pluginList) => {
       plist = pluginList;
       pluginList.forEach((plugin) => {
