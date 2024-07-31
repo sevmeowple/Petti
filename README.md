@@ -13,7 +13,7 @@ pnpm install
 pnpm tauri dev
 ```
 
-构建
+## 构建
 ```sh
 pnpm tauri build
 ```
